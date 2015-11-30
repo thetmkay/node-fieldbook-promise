@@ -1,0 +1,18 @@
+{
+  "name": "fieldbook-promise",
+  "version": "0.0.1",
+  "description": "Promise wrapper for Fieldbook API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "George Nishimura <me@georgenishimura.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "node-fieldbook": "0.0.3"
+  },
+  "devDependencies": {
+    "agave": "^0.6.1",
+    "tape": "^4.2.2"
+  }
+}
