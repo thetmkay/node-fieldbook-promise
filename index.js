@@ -1,6 +1,7 @@
 (function(config){
 
-	var request = require('superagent-bluebird-promise');
+
+	var request = require('superagent-promise')(require('superagent'), this.Promise);
 	var options;
 
 	(function(config){
@@ -68,7 +69,7 @@
 			var api = buildApi(sheetId, recordId);
 			return basicRequest()
 				.patch(api)
-				.send(data);
+				.send(data)
 				.end();
 		},
 
