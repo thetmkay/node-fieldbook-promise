@@ -1,7 +1,7 @@
 module.exports = function(config){
 
 
-	var request = require('superagent-promise')(require('superagent'), this.Promise),
+	var request = require('superagent-promise')(require('superagent'), Promise),
 	url = require('url'),
 	constants = require('./constants');	
 
