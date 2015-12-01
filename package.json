@@ -11,7 +11,6 @@
   "dependencies": {
     "node-fieldbook": "0.0.3",
     "superagent": "^1.4.0",
-    "superagent-bluebird-promise": "^2.1.1",
     "superagent-promise": "^1.0.3"
   },
   "devDependencies": {
