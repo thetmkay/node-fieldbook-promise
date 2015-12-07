@@ -1,3 +1,8 @@
+Fieldbook-Promise
+----------------
+
+[![Build Status](https://travis-ci.org/thetmkay/node-fieldbook-promise.svg?branch=master)](https://travis-ci.org/thetmkay/node-fieldbook-promise)
+
 An unofficial npm module to use the [Fieldbook](https://fieldbook.com) API using native javascript promises.
 
 ### Useful links
@@ -26,7 +31,7 @@ The configuration parameter is an object which must have the following three pro
 - `user` (*string*): the username field (e.g. `key-1`)
 - `password` (*string*): the API key password
 
-All the information can be found by navigating to your book's page, pressing the downward arrow/triangle next to the name of the book, and clicking "Manage API" (see picture).
+All the information can be found by navigating to your book's page, pressing the downward arrow/triangle next to the name of the book, and clicking "Manage API" (see Fieldbook's [Quick Start Guide for more detail](https://github.com/fieldbook/api-docs/blob/master/quick-start.md)).
 
 **Example**:
 
