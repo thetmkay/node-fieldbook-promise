@@ -13,7 +13,7 @@ var config = require('../config'),
 	FIXED_SHEET_RECORD_ID = 1,
 	FIXED_SHEET_RECORD = {
 		id: 1,
-		field_0: null,
+		fixed_name_or_identifier: 'Fixed 1',
 		field1: 1,
 		date: '2015-02-10',
 		field_3: 'Test string'
