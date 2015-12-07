@@ -3,11 +3,24 @@ var test = require('tape'),
 
 agave.enable();
 
-var config = require('../config'),
-	constants = require('../constants'),
-	TEST_USER = config.fieldbook.user,
-	TEST_PASSWORD = config.fieldbook.password,
-	TEST_BOOK = config.fieldbook.book,
+var testConfig;
+
+if(process.env.TRAVIS){
+	testConfig = {
+		fieldbook:{
+			user: process.env.USER,
+			password: process.env.PASSWORD,
+			book: process.env.BOOK
+		}
+	}
+} else {
+	testConfig = require('../config');
+}
+
+var	constants = require('../constants'),
+	TEST_USER = testConfig.fieldbook.user,
+	TEST_PASSWORD = testConfig.fieldbook.password,
+	TEST_BOOK = testConfig.fieldbook.book,
 	SHEET_1_ID = 'sheet1',
 	FIXED_SHEET_ID = 'fixed',
 	FIXED_SHEET_RECORD_ID = 1,
