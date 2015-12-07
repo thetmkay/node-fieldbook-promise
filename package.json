@@ -7,7 +7,7 @@
     "test": "node tests/index-test.js"
   },
   "author": "George Nishimura <me@georgenishimura.com>",
-  "license": "UNLICENSED",
+  "license": "ISC",
   "dependencies": {
     "node-fieldbook": "0.0.3",
     "superagent": "^1.4.0",
@@ -17,5 +17,9 @@
     "agave": "^0.6.1",
     "tape": "^4.2.2"
   },
-  "repository": "git@github.com:thetmkay/node-fieldbook-promise"
+  "repository":{
+	"type": "git",
+	"url": "git@github.com:thetmkay/node-fieldbook-promise"
+  },
+  "bugs":"https://github.com/thetmkay/node-fieldbook-promise/issues"
 }
