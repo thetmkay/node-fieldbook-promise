@@ -4,7 +4,7 @@
   "description": "Promise wrapper for Fieldbook API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/index-test.js"
   },
   "author": "George Nishimura <me@georgenishimura.com>",
   "license": "UNLICENSED",
@@ -16,5 +16,6 @@
   "devDependencies": {
     "agave": "^0.6.1",
     "tape": "^4.2.2"
-  }
+  },
+  "repository": "git@github.com:thetmkay/node-fieldbook-promise"
 }

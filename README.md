@@ -9,7 +9,7 @@ An unofficial npm module to use the [Fieldbook](https://fieldbook.com) API using
 ### Installation
 
 ````
-npm install thetmkay/node-fieldbook-promise
+npm install fieldbook-promise
 ````
 
 ### Documentation
@@ -18,7 +18,7 @@ The module exports an object with the following objects. They all return native 
 
 #### *module*
 
-The module exports a function, which given a valid configuration for a Fieldbook `book`, will return a `book` object with methods to read and write to the `book`.
+The module exports a function, which given a valid configuration for a Fieldbook book, will return a book object with methods to read and write to the book.
 
 The configuration parameter is an object which must have the following three properties (otherwise an `Error` will be thrown:
 
@@ -39,47 +39,47 @@ var book = Fieldbook({
 });
 ````
 
-The returned `book` object (note just a regular object, not a `class` *TODO*) exposes the following methods:
+The returned book object (note just a regular object, not a `class` *TODO*) exposes the following methods:
 
 **Note**: The methods all return promises and correspond directly with the [Fieldbook REST API](https://github.com/fieldbook/api-docs/blob/master/reference.md) which is currently at v1.
 
-##### *getSheets()*
+##### getSheets()
 
 - returns `Promise`
 - fulfilled with: `array`
 
 Fulfills with the array of sheets associated with the book. 
 
-##### *getSheet(sheetId)*
+##### getSheet(sheetId)
 
 - returns `Promise`
 - fulfilled with: `array`
 
 Fulfills with the array of records (*object*) for the sheet. Sheet IDs are lowercase, stripped of original punctuation, spaces replaced by underscores. [More detail in Fieldbook's API Docs](https://github.com/fieldbook/api-docs/blob/master/reference.md#sheet-titles--field-names).
 
-##### *getRecord(sheetId, recordId)*
+##### getRecord(sheetId, recordId)
 
 - returns `Promise`
 - fulfilled with: `object`
 
-Fulfills with the retrieved `record` object from the given sheet. Properties of the object correspond with the column headers (**NOTE**: the initial column is given the default name `fixed_name_or_identifier`).
+Fulfills with the retrieved `record` object from the given sheet. Properties of the object correspond with the column headers (**NOTE**: the initial column is given the default name `{sheet_name}_name_or_identifier`).
 
 
-##### *addRecord(sheetId)*
+##### addRecord(sheetId)
 
 - returns `Promise`
 - fulfilled with: `object`
 
 Fulfills with the added `record` object.
 
-##### *updateRecord(sheetId, recordId, data)
+##### updateRecord(sheetId, recordId, data)
 
 - returns `Promise`
 - fulfilled with: `object`
 
 Fulfills with the updated `record` object after patching it with `data`. 
 
-##### *deleteRecord(sheetId, recordId)
+##### deleteRecord(sheetId, recordId)
 
 - returns `Promise`
 - fulfilled with: `object`
@@ -98,5 +98,38 @@ Testing uses the [tape](https://github.com/substack/tape) testing framework, and
 
 It currently uses a test book whose API keys are stored in `config.js` in the root project folder, which is not included as part of the repo.
 
+#### Set-Up
 
+1. Create a new book using [Fieldbook](https://fieldbook.com)
+2. Store the `book`, `user` and `password` in config
+3. Create a new sheet called `Fixed`
+4. Create a new sheet called `Sheet 1`
+5. Put the following columns/record:
 
+**Fixed**
+
+Columns:
+- `Fixed name or identifier`
+- `Field1` (number)
+- `Date` (date)
+- `Field 3` (text)
+
+Records:
+
+1 row
+- `Fixed name or identifier`:`Fixed 1` (should be default)
+- `Field1`:`1`
+- `Date`:`2/10/2015`
+- `Field 3`:`Test string`
+
+**Sheet1** 
+
+Columns:
+- `Sheet1 name or identifier`
+- `Number`
+- `Date`
+- `Text`
+
+Records:
+
+empty (no rows)
