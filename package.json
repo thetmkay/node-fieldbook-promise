@@ -1,6 +1,6 @@
 {
   "name": "fieldbook-promise",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Promise wrapper for Fieldbook API",
   "main": "index.js",
   "scripts": {
@@ -17,9 +17,9 @@
     "agave": "^0.6.1",
     "tape": "^4.2.2"
   },
-  "repository":{
-	"type": "git",
-	"url": "git@github.com:thetmkay/node-fieldbook-promise"
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:thetmkay/node-fieldbook-promise"
   },
-  "bugs":"https://github.com/thetmkay/node-fieldbook-promise/issues"
+  "bugs": "https://github.com/thetmkay/node-fieldbook-promise/issues"
 }
