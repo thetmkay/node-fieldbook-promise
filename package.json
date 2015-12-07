@@ -17,6 +17,7 @@
     "agave": "^0.6.1",
     "tape": "^4.2.2"
   },
+  "keywords":["fieldbook","promises"],
   "repository": {
     "type": "git",
     "url": "git@github.com:thetmkay/node-fieldbook-promise"
